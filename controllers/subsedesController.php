@@ -14,10 +14,13 @@ class subsedesController{
 
     public function ListAll(){
         $resp= $this->model->read();
-        return $resp;
+        return $resp->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
-$sub = new subsedesController();
-$sub->ListAll();
- ?>   
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $sub = new subsedesController();
+    echo json_encode($sub->ListAll());
+}
+
+?>   

@@ -453,13 +453,13 @@ h2, .h2 {
 /* Botones */
 .btn3d {
 	position: relative;
-	top: -6px;
+	top: -2px;
 	border: 0;
 	transition: all 40ms linear;
 	margin-top: 2px;
 	margin-bottom: 2px;
-	margin-left: 2px;
-	margin-right: 2px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .btn3d:active:focus,
@@ -567,3 +567,13 @@ h2, .h2 {
 	background-color: #bb39d7;
 }
 /* Fin botones */
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px; /* Espacio entre los botones */
+}
+
+.table td:last-child {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}
