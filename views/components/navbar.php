@@ -6,30 +6,30 @@
     </header>
     <nav class="dashboard-nav-list">
         
-        <a href="/glorias" class="dashboard-nav-item">
+        <a href="glorias.php" class="dashboard-nav-item <?php echo $activePage == 'glorias' ? 'active' : ''; ?>">
         <i class="fa-solid fa-medal"></i>
         Glorias
         </a>
-        <a href="subsedes.php" class="dashboard-nav-item active">
+        <a href="subsedes.php" class="dashboard-nav-item <?php echo $activePage == 'subsedes' ? 'active' : ''; ?>">
         <i class="fas fa-sitemap"></i>
         Subsedes
         </a>
-        <a href="/instituciones" class="dashboard-nav-item">
+        <a href="instituciones.php" class="dashboard-nav-item <?php echo $activePage == 'instituciones' ? 'active' : ''; ?>">
         <i class="fas fa-hotel"></i>
         Instituciones 
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="proyectos.php" class="dashboard-nav-item <?php echo $activePage == 'proyectos' ? 'active' : ''; ?>"">
         <i class="fas fa-chart-bar"></i>
         Proyectos
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="reportes.php" class="dashboard-nav-item <?php echo $activePage == 'reportes' ? 'active' : ''; ?>"">
         <i class="fas fa-chart-pie"></i>
         Reportes
         </a>
-        <a href="#" class="dashboard-nav-item"><i class="fas fa-file-invoice"></i>
+        <a href="nominas.php" class="dashboard-nav-item <?php echo $activePage == 'nominas' ? 'active' : ''; ?>""><i class="fas fa-file-invoice "></i>
         Nominas 
         </a>
-        <a href="#" class="dashboard-nav-item"><i class="fas fa-user-tie"></i>
+        <a href="usuarios.php" class="dashboard-nav-item <?php echo $activePage == 'usuarios' ? 'active' : ''; ?>""><i class="fas fa-user-tie"></i>
         Usuarios 
         </a>
     <div class="nav-item-divider"></div>

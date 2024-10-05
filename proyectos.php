@@ -15,7 +15,7 @@
   <body>
   <div class='dashboard'>
         <?php
-        $activePage = 'subsedes';
+        $activePage = 'proyectos';
         require_once('./views/components/navbar.php');
         ?>
         <div class='dashboard-app'>
@@ -27,17 +27,17 @@
                     <div class='card'>
                         
                         <div class='card-header'>
-                            <h2><i class="fas fa-sitemap"></i> Gestión de Subsedes </h2>
-                                <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Crear Nueva</button>
+                            <h2><i class="fas fa-chart-bar"></i> Gestión de Proyectos </h2>
+                                <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Crear Nuevo</button>
                         </div>
                         <div class='card-body'>
 
                         <!-- Modal -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog custom-width-proyectos">
                             <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Gestión de Subsedes</h5>
+                                <h5 class="modal-title" id="staticBackdropLabel">Gestión de Proyectos</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -46,42 +46,86 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <!-- Id -->
-                                    <input type="hidden" id="idSubsede" name="idSubsede" value="">
+                                    <input type="hidden" id="idproyecto" name="idproyecto" value="">
                                     <label for="exampleInputEmail1">Nombre</label>
                                     <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
                                     <small id="textErrorNombre" style="display:none;" class="form-text text-danger">Campo Requerido</small>
                                 </div>
-                                 </div>
+                                </div>
                                 <div class="col">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Encargado</label>
-                                    <input type="text" class="form-control" id="encargado" aria-describedby="emailHelp">
-                                    <small id="textErrorEncargado" style="display:none;" class="errorText form-text text-danger">Campo Requerido.</small>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Dirección</label>
+                                    <label for="exampleInputEmail1">Ubicación</label>
                                     <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp">
                                     <small id="textErrorDireccion" style="display:none;" class="errorText form-text text-danger">Campo Requerido.</small>
                                 </div>
-                                 </div>
+                                </div>
+                                <div class="col">
+                                <div class="form-group">
+                                    <label for="subsede">Subsede</label>
+                                    <select class="form-control" id="subsede">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="subsede1">Subsede 1</option>
+                                        <option value="subsede2">Subsede 2</option>
+                                        <option value="subsede3">Subsede 3</option>
+                                    </select>
+                                </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                
                             </div>
                             <div class="row">
                                 <div class="col">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Teléfono</label>
+                                    <label for="exampleInputEmail1">Encargado</label>
                                     <input type="text" class="form-control" id="telefono" aria-describedby="emailHelp">
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your</small>-->
                                 </div>
                                  </div>
                                 <div class="col">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
+                                    <label for="exampleInputEmail1">Trabajadores involucrados</label>
                                     <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share.</small>-->
+                                </div>
+                                </div>
+                                <div class="col">
+                                <div class="form-group">
+                                    <label for="subsede">Institucione de Apoyo</label>
+                                    <select class="form-control" id="subsede">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="subsede1">Subsede 1</option>
+                                        <option value="subsede2">Subsede 2</option>
+                                        <option value="subsede3">Subsede 3</option>
+                                    </select>
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share.</small>-->
+                                </div>
+
+                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fecha de Inicio</label>
+                                    <input type="date" class="form-control" id="telefono" aria-describedby="emailHelp">
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your</small>-->
+                                </div>
+                                 </div>
+                                <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fecha de Fin</label>
+                                    <input type="date" class="form-control" id="email" aria-describedby="emailHelp">
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share.</small>-->
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Actividad a Realizar</label>
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your</small>-->
                                 </div>
                                 </div>
                             </div>
@@ -102,8 +146,7 @@
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Encargado</th>
-                                    <th>Dirección</th>
+                                    <th>Ubicación</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -113,8 +156,7 @@
                             <tfoot>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Encargado</th>
-                                    <th>Dirección</th>
+                                    <th>Ubicación</th>
                                     <th>Acciones</th>
                                 </tr>
                             </tfoot>
@@ -133,7 +175,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./lib/js/principal.js"></script>
-    <script src="./lib/js/Subsedes.js"></script>
+    <script src="./lib/js/Proyectos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>

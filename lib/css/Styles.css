@@ -76,6 +76,10 @@ h2, .h2 {
     font-weight: normal;
 }
 
+.custom-width {
+    max-width: 80%; /* Puedes ajustar el porcentaje según tus necesidades */
+}
+
 .card {
     position: relative;
     display: -webkit-box;
@@ -101,6 +105,10 @@ h2, .h2 {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1.25rem;
+}
+
+.custom-width-proyectos {
+    max-width: 70% !important; /* El !important asegura que este estilo tenga prioridad */
 }
 
 .card-header {
