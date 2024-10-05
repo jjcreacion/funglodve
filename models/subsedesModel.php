@@ -9,39 +9,40 @@ class Subsedes {
     public $direccion;
     public $telefono;
     public $email;
-    public $create_at;
-    public $update_at;
+    public $created_at;
+    public $updated_at;
 
     public function __construct($db) {
         $this->conn = $db;
     }
 
-    public function create() {
-        $query = "INSERT INTO " . $this->table_name . " (nombre, encargado, direccion, telefono, email, create_at, update_at) VALUES (:nombre, :encargado, :direccion, :telefono, :email, :create_at, :update_at)";
+    public function create($data) {
+        $query = "INSERT INTO " . $this->table_name . " (nombre, encargado, direccion, telefono, email, created_at, updated_at) VALUES (:nombre, :encargado, :direccion, :telefono, :email, :created_at, :updated_at)";
         $stmt = $this->conn->prepare($query);
-
-        $this->nombre = htmlspecialchars(strip_tags($this->nombre));
-        $this->encargado = htmlspecialchars(strip_tags($this->encargado));
-        $this->direccion = htmlspecialchars(strip_tags($this->direccion));
-        $this->telefono = htmlspecialchars(strip_tags($this->telefono));
-        $this->email = htmlspecialchars(strip_tags($this->email));
-        $this->create_at = htmlspecialchars(strip_tags($this->create_at));
-        $this->update_at = htmlspecialchars(strip_tags($this->update_at));
-
+    
+        $this->nombre = htmlspecialchars(strip_tags($data['nombre']));
+        $this->encargado = htmlspecialchars(strip_tags($data['encargado']));
+        $this->direccion = htmlspecialchars(strip_tags($data['direccion']));
+        $this->telefono = htmlspecialchars(strip_tags($data['telefono']));
+        $this->email = htmlspecialchars(strip_tags($data['email']));
+        $this->created_at = date('Y-m-d H:i:s');
+        $this->updated_at = date('Y-m-d H:i:s');
+    
         // Vincular valores
         $stmt->bindParam(":nombre", $this->nombre);
         $stmt->bindParam(":encargado", $this->encargado);
         $stmt->bindParam(":direccion", $this->direccion);
         $stmt->bindParam(":telefono", $this->telefono);
         $stmt->bindParam(":email", $this->email);
-        $stmt->bindParam(":create_at", $this->create_at);
-        $stmt->bindParam(":update_at", $this->update_at);
-
+        $stmt->bindParam(":created_at", $this->created_at);
+        $stmt->bindParam(":updated_at", $this->updated_at);
+    
         if ($stmt->execute()) {
             return true;
         }
         return false;
     }
+    
 
     public function read() {
         $query = "SELECT * FROM " . $this->table_name;
@@ -50,37 +51,42 @@ class Subsedes {
         return $stmt;
     }
 
-    public function update() {
-        $query = "UPDATE " . $this->table_name . " SET nombre = :nombre, encargado = :encargado, direccion = :direccion, telefono = :telefono, email = :email, update_at = :update_at WHERE id = :id";
+    public function update($data) {
+        $query = "UPDATE " . $this->table_name . " SET nombre = :nombre, encargado = :encargado, direccion = :direccion, telefono = :telefono, email = :email, updated_at = :updated_at WHERE id = :id";
         $stmt = $this->conn->prepare($query);
-
-        $this->nombre = htmlspecialchars(strip_tags($this->nombre));
-        $this->encargado = htmlspecialchars(strip_tags($this->encargado));
-        $this->direccion = htmlspecialchars(strip_tags($this->direccion));
-        $this->telefono = htmlspecialchars(strip_tags($this->telefono));
-        $this->email = htmlspecialchars(strip_tags($this->email));
-        $this->update_at = htmlspecialchars(strip_tags($this->update_at));
-        $this->id = htmlspecialchars(strip_tags($this->id));
-
+    
+        $this->id = htmlspecialchars(strip_tags($data['idSubsede']));
+        $this->nombre = htmlspecialchars(strip_tags($data['nombre']));
+        $this->encargado = htmlspecialchars(strip_tags($data['encargado']));
+        $this->direccion = htmlspecialchars(strip_tags($data['direccion']));
+        $this->telefono = htmlspecialchars(strip_tags($data['telefono']));
+        $this->email = htmlspecialchars(strip_tags($data['email']));
+        $this->updated_at = date('Y-m-d H:i:s');
+    
+        // Vincular valores
+        $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":nombre", $this->nombre);
         $stmt->bindParam(":encargado", $this->encargado);
         $stmt->bindParam(":direccion", $this->direccion);
         $stmt->bindParam(":telefono", $this->telefono);
         $stmt->bindParam(":email", $this->email);
-        $stmt->bindParam(":update_at", $this->update_at);
-        $stmt->bindParam(":id", $this->id);
-
+        $stmt->bindParam(":updated_at", $this->updated_at);
+    
+        if ($stmt->execute()) {
+            return true;
+        }
+        return false;
         if ($stmt->execute()) {
             return true;
         }
         return false;
     }
 
-    public function delete() {
+    public function delete($id) {
         $query = "DELETE FROM " . $this->table_name . " WHERE id = :id";
         $stmt = $this->conn->prepare($query);
 
-        $this->id = htmlspecialchars(strip_tags($this->id));
+        $this->id = htmlspecialchars(strip_tags($id));
         $stmt->bindParam(":id", $this->id);
 
         if ($stmt->execute()) {

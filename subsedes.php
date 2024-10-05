@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="../lib/css/Styles.css">
+    <link rel="stylesheet" href="./lib/css/Styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -15,11 +15,11 @@
   <body>
   <div class='dashboard'>
         <?php
-        require_once __DIR__ . '/components/navbar.php';
+        require_once('./views/components/navbar.php');
         ?>
         <div class='dashboard-app'>
            <?php
-            require_once('components/header.php');    
+            require_once('./views/components/header.php');    
             ?>
             <div class='dashboard-content'>
                 <div class='container'>
@@ -131,8 +131,8 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../lib/js/principal.js"></script>
-    <script src="../lib/js/Subsedes.js"></script>
+    <script src="./lib/js/principal.js"></script>
+    <script src="./lib/js/Subsedes.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>

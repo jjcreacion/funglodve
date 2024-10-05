@@ -55,6 +55,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.border-red {
+    border: 1px solid red !important;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Nunito", sans-serif;
     margin-bottom: 0.2rem;
@@ -575,5 +579,5 @@ h2, .h2 {
 }
 
 .table td:last-child {
-    width: 200px; /* Ajusta el ancho según sea necesario */
+    width: 150px; /* Ajusta el ancho según sea necesario */
 }
