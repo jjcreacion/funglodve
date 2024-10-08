@@ -38,6 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
+    $insert = $_POST['insert'];
+    $idproyecto = $_POST['idproyecto'];
     $ubicacion = $_POST['ubicacion'];
     $encargado = $_POST['encargado'];
     $trabajadores = $_POST['trabajadores'];
@@ -48,7 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subsede = $_POST['subsede'];
    
     $data = [
-        'idProyecto' => $idProyecto,
+        'idproyecto' => $idproyecto,
+        'insert' => $insert,
         'nombre' => $nombre,
         'ubicacion' => $ubicacion,
         'encargado' => $encargado,
@@ -79,9 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE') { 
     
     parse_str(file_get_contents("php://input"), $data);
-    $idProyectos = $data['idProyectos'];  
+    $idproyecto = $data['idproyecto'];  
    
-    if ($pro->Delete($idProyectos)) {
+    if ($pro->Delete($idproyecto)) {
         echo json_encode(['message' => 'Proyectos created successfully']);
     } else {
         echo json_encode(['message' => 'Failed to create Proyectos']);

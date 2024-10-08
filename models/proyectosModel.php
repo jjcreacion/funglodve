@@ -64,10 +64,10 @@ class Proyectos {
     }
 
     public function update($data) {
-        $query = "UPDATE " . $this->table_name . " SET nombre = :nombre, encargado = :encargado, direccion = :direccion, telefono = :telefono, email = :email, updated_at = :updated_at WHERE id = :id";
+        $query = "UPDATE " . $this->table_name . " SET nombre = :nombre, encargado = :encargado, ubicacion = :ubicacion, trabajadores = :trabajadores, actividad = :actividad, f_inicio = :f_inicio, f_fin = :f_fin, updated_at = :updated_at, institucion = :institucion, subsede = :subsede WHERE id = :id";
         $stmt = $this->conn->prepare($query);
     
-        $this->id = htmlspecialchars(strip_tags($data['idProyectos']));
+        $this->id = htmlspecialchars(strip_tags($data['idproyecto']));
         $this->nombre = htmlspecialchars(strip_tags($data['nombre']));
         $this->ubicacion = htmlspecialchars(strip_tags($data['ubicacion']));
         $this->encargado = htmlspecialchars(strip_tags($data['encargado']));
@@ -77,23 +77,21 @@ class Proyectos {
         $this->f_fin = htmlspecialchars(strip_tags($data['f_fin']));
         $this->institucion = htmlspecialchars(strip_tags($data['institucion']));
         $this->subsede = htmlspecialchars(strip_tags($data['subsede']));
-        $this->updated_at = date('Y-m-d H:i:s');
-    
         $this->updated_at = date('Y-m-d H:i:s');
     
         // Vincular valores
         $stmt->bindParam(":id", $this->id);
-        $this->nombre = htmlspecialchars(strip_tags($data['nombre']));
-        $this->ubicacion = htmlspecialchars(strip_tags($data['ubicacion']));
-        $this->encargado = htmlspecialchars(strip_tags($data['encargado']));
-        $this->trabajadores = htmlspecialchars(strip_tags($data['trabajadores']));
-        $this->actividad = htmlspecialchars(strip_tags($data['actividad']));
-        $this->f_inicio = htmlspecialchars(strip_tags($data['f_inicio']));
-        $this->f_fin = htmlspecialchars(strip_tags($data['f_fin']));
-        $this->institucion = htmlspecialchars(strip_tags($data['institucion']));
-        $this->subsede = htmlspecialchars(strip_tags($data['subsede']));
-        $this->created_at = date('Y-m-d H:i:s');
-        
+        $stmt->bindParam(":nombre", $this->nombre);
+        $stmt->bindParam(":ubicacion", $this->ubicacion);
+        $stmt->bindParam(":encargado", $this->encargado);
+        $stmt->bindParam(":trabajadores", $this->trabajadores);
+        $stmt->bindParam(":actividad", $this->actividad);
+        $stmt->bindParam(":f_inicio", $this->f_inicio);
+        $stmt->bindParam(":f_fin", $this->f_fin);
+        $stmt->bindParam(":institucion", $this->institucion);
+        $stmt->bindParam(":subsede", $this->subsede);
+        $stmt->bindParam(":updated_at", $this->updated_at);
+                
         if ($stmt->execute()) {
             return true;
         }
