@@ -2,7 +2,7 @@
     <header>
     <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
     <!--<a href="#" class="brand-logo"><i class="fas fa-anchor"></i> </a>-->
-    <img src="./lib/img/logovertical.png" width="130" height="120">
+    <a href="dashboard.php"><img  href="glorias.php" src="./lib/img/logovertical.png" width="130" height="120"></a>
     </header>
     <nav class="dashboard-nav-list">
         
