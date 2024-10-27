@@ -1,13 +1,13 @@
 <?php
 /*return array(
-    "driver"    =>"pgsql",
-    "host"      =>"ep-shrill-flower-a4d5x3hk-pooler.us-east-1.aws.neon.tech",
-    "user"      =>"default",
-    "pass"      =>"mR4HnV5PvILa",
-    "database"  =>"verceldb",
+    "driver"    =>"mysql",
+    "host"      =>"sql302.infinityfree.com",
+    "user"      =>"if0_37528662",
+    "pass"      =>"Pfah3qxSRolI7F",
+    "database"  =>"if0_37528662_funglodve",
     "charset"   =>"utf8"
-);*/
-
+);
+*/
 return array(
     "driver"    =>"pgsql",
     "host"      =>"localhost",
