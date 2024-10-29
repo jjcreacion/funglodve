@@ -28,53 +28,78 @@ class gloriasController{
     public function Delete($id) {
         return $this->model->delete($id);
     }
+
+    public function GetById($id){
+        return $this->model->GetById($id);
+    }
 }
 
 $glo = new gloriasController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {    
-    echo json_encode($glo->ListAll());
+    if (isset($_GET['idgloria'])) {
+        $id = $_GET['idgloria'];
+       echo json_encode($glo->GetById($id));
+    } else {
+        echo json_encode($glo->ListAll());
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = $_POST['nombre'];
+    
     $insert = $_POST['insert'];
-    $idproyecto = $_POST['idproyecto'];
-    $ubicacion = $_POST['ubicacion'];
-    $encargado = $_POST['encargado'];
-    $trabajadores = $_POST['trabajadores'];
-    $actividad = $_POST['actividad'];
-    $f_inicio = $_POST['f_inicio'];
-    $f_fin = $_POST['f_fin'];
-    $institucion = $_POST['institucion'];
+    $idgloria = $_POST['idgloria'];
+    $cedula = $_POST['cedula'];
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $direccion = $_POST['direccion'];
+    $email = $_POST['email'];
+    $telefono = $_POST['telefono'];
+    $ocupacion = $_POST['ocupacion'];
+    $e_civil = $_POST['e_civil'];
+    $fecha_nac = $_POST['fecha_nac'];
     $subsede = $_POST['subsede'];
+    $estado = $_POST['estado'];
+    $municipio = $_POST['municipio'];
+    $disciplina = $_POST['disciplina'];
+    $tipo = $_POST['tipo'];
+    $grado = $_POST['grado'];
+    $f_ingreso = $_POST['f_ingreso'];  
    
     $data = [
-        'idproyecto' => $idproyecto,
+        'idgloria' => $idgloria,
         'insert' => $insert,
+        'cedula' => $cedula,
         'nombre' => $nombre,
-        'ubicacion' => $ubicacion,
-        'encargado' => $encargado,
-        'trabajadores' => $trabajadores,
-        'actividad' => $actividad,
-        'f_inicio' => $f_inicio,
-        'f_fin' => $f_fin,
-        'institucion' => $institucion,
-        'subsede' => $subsede
+        'apellido' => $apellido,
+        'direccion' => $direccion,
+        'email' => $email,
+        'telefono' => $telefono,
+        'ocupacion' => $ocupacion,
+        'e_civil' => $e_civil,
+        'fecha_nac' => $fecha_nac,
+        'subsede' => $subsede,
+        'estado' => $estado,
+        'municipio' => $municipio,
+        'disciplina' => $disciplina,
+        'tipo' => $tipo,
+        'grado' => $grado,
+        'f_ingreso' => $f_ingreso,
     ];
 
+
     if($insert=='true'){
-       if ($pro->Create($data)) {
-            echo json_encode(['message' => 'Proyectos created successfully']);
+       if ($glo->Create($data)) {
+            echo json_encode(['message' => 'Glorias created successfully']);
         } else {
-            echo json_encode(['message' => 'Failed to create Proyectos']);
+            echo json_encode(['message' => 'Failed to create Glorias']);
         }
     }
     else{
-        if ($pro->Update($data)) {
-            echo json_encode(['message' => 'Proyectos created successfully']);
+        if ($glo->Update($data)) {
+            echo json_encode(['message' => 'Glorias created successfully']);
         } else {
-            echo json_encode(['message' => 'Failed to create Proyectos']);
+            echo json_encode(['message' => 'Failed to update Glorias']);
         }
     }
 }
@@ -82,9 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE') { 
     
     parse_str(file_get_contents("php://input"), $data);
-    $idproyecto = $data['idproyecto'];  
+    $idgloria = $data['idgloria'];  
    
-    if ($pro->Delete($idproyecto)) {
+    if ($glo->Delete($idgloria)) {
         echo json_encode(['message' => 'Proyectos created successfully']);
     } else {
         echo json_encode(['message' => 'Failed to create Proyectos']);

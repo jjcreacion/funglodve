@@ -30,7 +30,7 @@ $filterQuery->execute();
 $filteredTotal = $filterQuery->fetchColumn();
 
 // Recuperar datos filtrados
-$dataQuery = $pdo->prepare("SELECT cedula, CONCAT(nombre, ' ', apellido) AS nombre_completo FROM glorias WHERE CONCAT(nombre, ' ', apellido) LIKE :search OR cedula LIKE :search ORDER BY nombre LIMIT :length OFFSET :start");
+$dataQuery = $pdo->prepare("SELECT id, cedula, CONCAT(nombre, ' ', apellido) AS nombre_completo FROM glorias WHERE CONCAT(nombre, ' ', apellido) LIKE :search OR cedula LIKE :search ORDER BY nombre LIMIT :length OFFSET :start");
 $dataQuery->bindParam(':search', $searchParam, PDO::PARAM_STR);
 $dataQuery->bindParam(':start', $start, PDO::PARAM_INT);
 $dataQuery->bindParam(':length', $length, PDO::PARAM_INT);

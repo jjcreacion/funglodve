@@ -46,7 +46,7 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <!-- Id -->
-                                    <input type="hidden" id="idproyecto" name="idproyecto" value="">
+                                    <input type="hidden" id="idgloria" name="idgloria" value="">
                                     <label for="exampleInputEmail1">Cédula</label>
                                     <input type="text" class="form-control" id="cedula" aria-describedby="emailHelp">
                                     <small id="textErrorCedula" style="display:none;" class="form-text text-danger">Campo Requerido</small>
@@ -82,14 +82,14 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email</label>
-                                    <input type="text" class="form-control" id="trabajadores" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
                                 </div>
                                 </div>
                                 
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Teléfono</label>
-                                    <input type="text" class="form-control" id="encargado" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" id="telefono" aria-describedby="emailHelp">
                                 </div>
                                  </div>
                                  
@@ -102,7 +102,7 @@
                              <div class="col">
                                 <div class="form-group">
                                     <label for="subsede">Ocupación</label>
-                                    <input type="text" class="form-control" id="encargado" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" id="ocupacion" aria-describedby="emailHelp">
                                 </div>
                                  </div>
                                 
@@ -111,7 +111,6 @@
                                     <!-- Id -->
                                     <label for="exampleInputEmail1">Estado Civil</label>
                                     <select name="e_civil" id="e_civil" class="form-control">
-                                        <option value="-1">...</option>
                                         <option value="1">Soltero(a)</option>
                                         <option value="2">Casado(a)</option>
                                         <option value="3">Viudo(a)</option>
@@ -123,8 +122,7 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="subsede">Fecha de Nacimiento </label>
-                                    <input type="date" class="form-control" id="f_nac" aria-describedby="emailHelp">
-                                    <small id="textErrorApellido" style="display:none;" class="errorText form-text text-danger">Campo Requerido.</small>
+                                    <input type="date" class="form-control" id="fecha_nac" aria-describedby="emailHelp">
                                 </div>
                                 </div>
                             </div>
@@ -132,14 +130,15 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Sub Sede</label>
-                                    <input type="text" class="form-control" id="f_inicio" aria-describedby="emailHelp">
+                                    <select class="form-control" id="subsede">
+                                    </select>
+                                   <small id="textErrorSubsede" style="display:none;" class="errorText form-text text-danger">Campo Requerido.</small>
                                 </div>
                                  </div>
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Estado </label>
                                     <select id="estado" class="form-control">
-                                        <option value="">Seleccione un estado</option>
                                     </select>
                                 </div>
                                 </div>
@@ -147,7 +146,6 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Municipio </label>
                                     <select id="municipio" class="form-control">
-                                        <option value="">Seleccione un municipio</option>
                                     </select>
                                 </div>
                                 </div>
@@ -156,8 +154,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Disciplina</label>
-                                        <select class="form-control" name="disciplina" id="disciplina">
-                                        <option value="-1">...</option>
+                                        <select class="form-control" id="disciplina">
                                         <option value="30">Ajedrez</option>
                                         <option value="1">Atletismo</option>
                                         <option value="31">Balon mano</option>
@@ -191,13 +188,13 @@
                                         <option value="23">Voleibol</option>
                                         <option value="30">Wushu</option>
                                     </select>
+                                    <small id="textErrorDisciplina" style="display:none;" class="errorText form-text text-danger">Campo Requerido.</small>
                                 </div>
                                  </div>
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tipo de Gloria</label>
-                                    <select class="form-control" name="tipo_gd" id="tipo_gd">
-                                        <option value="-1">...</option>
+                                    <select class="form-control" id="tipo">
                                         <option value="1">Internacional</option>
                                         <option value="2">Regional</option>
                                     </select>
@@ -207,7 +204,6 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Grado </label>
                                     <select class="form-control" name="grado" id="grado">
-                                        <option value="-1">...</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -218,7 +214,7 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Fecha de ingreso </label>
-                                    <input type="date" class="form-control" id="f_fin" aria-describedby="emailHelp">
+                                    <input type="date" class="form-control" id="f_ingreso" aria-describedby="emailHelp">
                                 </div>
                                 </div>
                             </div>
@@ -271,7 +267,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./lib/js/principal.js"></script>
+    <script src="./lib/js/modalGlorias.js"></script>
     <script src="./lib/js/Glorias.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
