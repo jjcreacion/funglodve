@@ -229,6 +229,36 @@ h2, .h2 {
     color: #fff; 
 }
 
+.custom-tab {
+    color: #000; /* Texto en negro */
+    background-color: #f8f9fa; /* Fondo claro */
+    border-color: #dee2e6; /* Color del borde */
+}
+
+.custom-tab:hover {
+    color: #0056b3; /* Color del texto al pasar el mouse */
+}
+
+.custom-tab.active {
+    color: #fff; /* Texto en blanco para la pestaña activa */
+    background-color: #007bff; /* Fondo azul para la pestaña activa */
+    border-color: #007bff; /* Borde azul para la pestaña activa */
+}
+
+.tab-pane {
+    background-color: #ffffff; /* Fondo blanco */
+    padding-top: 20px; 
+    margin-top: 0 !important; 
+}
+
+.tab-pane.fade {
+    opacity: 1; 
+}
+#otros-tab-pane { 
+    padding-top: 20px; 
+    margin-top: 0 !important; 
+}
+
 .brand-logo {
     font-family: "Nunito", sans-serif;
     font-weight: bold;

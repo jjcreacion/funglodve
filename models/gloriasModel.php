@@ -93,6 +93,14 @@ class Glorias {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function GetByCedula($cedula){
+        $sql = "SELECT * FROM glorias WHERE cedula = :cedula"; // Espacio entre 'glorias' y 'WHERE'
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':cedula', $cedula, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function update($data) {
         $query = "UPDATE " . $this->table_name . " SET 
                 cedula = :cedula,

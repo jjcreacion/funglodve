@@ -31,6 +31,80 @@
                                 <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Agregar</button>
                         </div>
                         <div class='card-body'>
+                        <!-- Modal Historial -->
+                        <div class="modal fade" id="ModalHistorial" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog custom-width-proyectos">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Historial Deportivo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">    
+                                <?php
+                                require_once('historial.php');    
+                                ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" id="btn-Guardar" class="btn btn-primary">
+                                <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <!-- Fin Modal Historial -->
+
+                        <!-- Modal Social -->
+                        <div class="modal fade" id="ModalSocial" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog custom-width-proyectos">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Datos Sociales</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">    
+                                <?php
+                                require_once('social.php');    
+                                ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" id="btn-Guardar" class="btn btn-primary">
+                                <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <!-- Fin Modal Social -->
+
+                        <!-- Modal Beneficios -->
+                        <div class="modal fade" id="ModalBeneficios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog custom-width-proyectos">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Beneficios Asignados</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">    
+                                <?php
+                                require_once('beneficios.php');    
+                                ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" id="btn-Guardar" class="btn btn-primary">
+                                <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <!-- Fin Modal Historial -->
 
                         <!-- Modal -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -236,8 +310,7 @@
                                 <tr>
                                     <th>Cédula</th>
                                     <th>Nombre</th>
-                                    <th>Social</th>
-                                    <th>Deportivo</th>
+                                    <th>Registros</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -248,8 +321,7 @@
                                 <tr>
                                     <th>Cédula</th>
                                     <th>Nombre</th>
-                                    <th>Social</th>
-                                    <th>Deportivo</th>
+                                    <th>Registros</th>
                                     <th>Acciones</th>
                                 </tr>
                             </tfoot>

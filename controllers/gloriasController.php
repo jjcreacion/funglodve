@@ -32,6 +32,9 @@ class gloriasController{
     public function GetById($id){
         return $this->model->GetById($id);
     }
+    public function GetByCedula($cedula){
+        return $this->model->GetByCedula($cedula);
+    }
 }
 
 $glo = new gloriasController();
@@ -41,6 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $id = $_GET['idgloria'];
        echo json_encode($glo->GetById($id));
     } else {
+        if(isset($_GET['cedula'])){
+            $cedula = $_GET['cedula'];
+            echo json_encode($glo->GetByCedula($cedula));
+        }
+        else
         echo json_encode($glo->ListAll());
     }
 }
