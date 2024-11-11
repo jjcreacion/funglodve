@@ -83,5 +83,13 @@ class HistorialC {
         }
         return false;
     }
+
+    public function GetById($id){
+        $sql = "SELECT * FROM " . $this->table_name . " WHERE id_gloria = :id"; 
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 ?>

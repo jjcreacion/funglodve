@@ -22,7 +22,7 @@
             <div class="col">
             <div class="form-group">
                 <label for="exampleInputEmail1">Fecha de inicio</label>
-                <input type="date" class="form-control" id="fecha_inicio" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="fecha_i" aria-describedby="emailHelp">
                 <small id="textErrorNombre" style="display:none;" class="form-text text-danger">Campo Requerido</small>
             </div>
             </div>
@@ -31,11 +31,11 @@
                 <label for="exampleInputEmail1">¿Estuvo Federado?</label>
                 <div class="d-flex align-items-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="1">
+                        <input class="form-check-input" type="radio" name="federado" id="fopcion1" value="1">
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="2">
+                        <input class="form-check-input" type="radio" name="federado" id="fopcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
             <div class="col">
             <div class="form-group">
                 <label for="exampleInputEmail1">¿Cual Federación?</label>
-                <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="cual" aria-describedby="emailHelp">
             </div>
             </div>
             <div class="col">
@@ -65,11 +65,11 @@
                 <label for="exampleInputEmail1">Juegos Nacionales</label>
                 <div class="d-flex align-items-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="1">
+                        <input class="form-check-input" type="radio" name="j_nac" id="jopcion1" value="1">
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="2">
+                        <input class="form-check-input" type="radio" name="j_nac" id="jopcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Numero de ediciones</label>
-                    <input type="number" class="form-control" id="nombre" aria-describedby="emailHelp">
+                    <input type="number" class="form-control" id="ediciones" aria-describedby="emailHelp">
                 </div>
             </div>
         </div><!-- Fin Row -->
@@ -86,8 +86,8 @@
         <div class="row">
          <div class="col">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Fecha de Participacón</label>
-                    <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1">Fecha de Participación</label>
+                    <input type="text" class="form-control" id="fecha_p" aria-describedby="emailHelp">
                 </div>
             </div>
             <div class="col">
@@ -95,15 +95,15 @@
                 <label for="exampleInputEmail1">¿Selección Nacional?</label>
                 <div class="d-flex align-items-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="1">
+                        <input class="form-check-input" type="radio" name="selec_nac" id="sopcion1" value="1">
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="2">
+                        <input class="form-check-input" type="radio" name="selec_nac" id="sopcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion3" value="3">
+                        <input class="form-check-input" type="radio" name="selec_nac" id="sopcion3" value="3">
                         <label class="form-check-label" for="opcion2">Preselección</label>
                     </div>
                 </div>
@@ -122,19 +122,19 @@
         <label for="exampleInputEmail1">Campeonatos</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="distrital" id="distrital" value="1">
                 <label class="form-check-label" for="opcion1">Distrital </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="estatal" id="estatal" value="2">
                 <label class="form-check-label" for="opcion2">Estatal </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="interclubes" id="interclubes" value="2">
                 <label class="form-check-label" for="opcion2">Inter-Clubes </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="cnacionales" id="cnacionales" value="2">
                 <label class="form-check-label" for="opcion2">Nacionales  </label>
             </div>
         </div>
@@ -148,7 +148,7 @@
         <label for="exampleInputEmail1">Juegos</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="jnacionales" id="jnacionales" value="1">
                 <label class="form-check-label" for="opcion1">Nacionales</label>
             </div>
         </div>
@@ -166,37 +166,37 @@
         <label for="exampleInputEmail1">Campeonatos</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="csuda" id="csuda" value="1">
                 <label class="form-check-label" for="opcion1">Sudamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="ccentro" id="ccentro" value="1">
                 <label class="form-check-label" for="opcion2">Centroamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="clatino" id="clatino" value="1">
                 <label class="form-check-label" for="opcion2">Latinomaericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="cboliva" id="cboliva" value="1">
                 <label class="form-check-label" for="opcion2">Bolivarianos </label>
             </div>
         </div>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="cpana" id="cpana" value="1">
                 <label class="form-check-label" for="opcion1">Panamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="cibero" id="cibero" value="1">
                 <label class="form-check-label" for="opcion2">Iberoamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="cligas" id="cligas" value="1">
                 <label class="form-check-label" for="opcion2">Ligas Continentales  </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="cmundiales" id="cmundiales" value="1">
                 <label class="form-check-label" for="opcion2">Mundiales </label>
             </div>
         </div>
@@ -210,7 +210,7 @@
         <label for="exampleInputEmail1">Invitacionales</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="invitacionales" id="invitacionales" value="1">
                 <label class="form-check-label" for="opcion1">Invitacionales</label>
             </div>
         </div>
@@ -224,33 +224,33 @@
         <label for="exampleInputEmail1">Juegos</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="jsuda" id="jsuda" value="1">
                 <label class="form-check-label" for="opcion1">Sudamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="jcentro" id="jcentro" value="1">
                 <label class="form-check-label" for="opcion2">Centroamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="jlatino" id="jlatino" value="1">
                 <label class="form-check-label" for="opcion2">Latinomaericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="jboliva" id="jboliva" value="1">
                 <label class="form-check-label" for="opcion2">Bolivarianos </label>
             </div>
         </div>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="jpana" id="jpana" value="1">
                 <label class="form-check-label" for="opcion1">Panamericanos </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="jalba" id="jalba" value="1">
                 <label class="form-check-label" for="opcion2">ALba </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion2" value="2">
+                <input class="form-check-input" type="checkbox" name="jjoo" id="jjoo" value="1">
                 <label class="form-check-label" for="opcion2">Olimpicos  </label>
             </div>
         </div>
@@ -268,15 +268,15 @@
     <div class="form-group">
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="entrenador" id="entrenador" value="1">
                 <label class="form-check-label" for="opcion1">Entrenador</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="arbitro" id="arbitro" value="1">
                 <label class="form-check-label" for="opcion1">Árbitro</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="opciones" id="opcion1" value="1">
+                <input class="form-check-input" type="checkbox" name="juez" id="juez" value="1">
                 <label class="form-check-label" for="opcion1">Juez</label>
             </div>
         </div>
@@ -289,13 +289,13 @@
             <div class="col">
             <div class="form-group">
                 <label for="exampleInputEmail1">Institución</label>
-                <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="oinstitucion" aria-describedby="emailHelp">
             </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tiempo de servicio</label>
-                    <input type="number" class="form-control" id="nombre" aria-describedby="emailHelp">
+                    <input type="tiempo" class="form-control" id="otiempo" aria-describedby="emailHelp">
                 </div>
             </div>
         </div><!-- Fin Row -->
@@ -306,11 +306,11 @@
                 <label for="exampleInputEmail1">¿Dirigente deportivo?</label>
                 <div class="d-flex align-items-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="1">
+                        <input class="form-check-input" type="radio" name="dopcion1" id="dopcion1" value="1">
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="2">
+                        <input class="form-check-input" type="radio" name="dopcion2" id="dopcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                 </div>
@@ -321,13 +321,13 @@
             <div class="col">
             <div class="form-group">
                 <label for="exampleInputEmail1">Institución</label>
-                <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="dinstitucion" aria-describedby="emailHelp">
             </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tiempo de servicio</label>
-                    <input type="number" class="form-control" id="nombre" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="dtiempo" aria-describedby="emailHelp">
                 </div>
             </div>
         </div><!-- Fin Row -->

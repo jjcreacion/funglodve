@@ -27,12 +27,16 @@ class HistorialIController {
     public function Delete($id) {
         return $this->model->delete($id);
     }
+    public function GetById($id){
+        return $this->model->GetById($id);
+    }
 }
 
 $obj = new HistorialIController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    echo json_encode($obj->ListAll());
+    $id = $_GET['idgloria'];
+   echo json_encode($obj->GetById($id));
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
