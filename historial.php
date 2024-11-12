@@ -22,6 +22,7 @@
             <div class="col">
             <div class="form-group">
                 <label for="exampleInputEmail1">Fecha de inicio</label>
+                <input type="hidden" id="historialBasico" name="historialBasico" value="">
                 <input type="text" class="form-control" id="fecha_i" aria-describedby="emailHelp">
                 <small id="textErrorNombre" style="display:none;" class="form-text text-danger">Campo Requerido</small>
             </div>
@@ -53,7 +54,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Estado Representado</label>
-                    <select id="estado" class="form-control">
+                    <select id="estadoH" class="form-control">
                     </select>
                 </div>
             </div>
@@ -122,6 +123,7 @@
         <label for="exampleInputEmail1">Campeonatos</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
+                <input type="hidden" id="historialNacional" name="historialNacional" value="">
                 <input class="form-check-input" type="checkbox" name="distrital" id="distrital" value="1">
                 <label class="form-check-label" for="opcion1">Distrital </label>
             </div>
@@ -166,6 +168,7 @@
         <label for="exampleInputEmail1">Campeonatos</label>
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
+            <input type="hidden" id="historialInternacional" name="historialInternacional" value="">
                 <input class="form-check-input" type="checkbox" name="csuda" id="csuda" value="1">
                 <label class="form-check-label" for="opcion1">Sudamericanos </label>
             </div>
@@ -268,6 +271,8 @@
     <div class="form-group">
         <div class="d-flex align-items-center">
             <div class="form-check form-check-inline">
+                <input type="hidden" id="idGloriaHistorial" name="idGloriaHistorial" value="">
+                <input type="hidden" id="historialOtros" name="historialOtros" value="">
                 <input class="form-check-input" type="checkbox" name="entrenador" id="entrenador" value="1">
                 <label class="form-check-label" for="opcion1">Entrenador</label>
             </div>

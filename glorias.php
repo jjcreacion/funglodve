@@ -46,7 +46,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" id="btn-Guardar" class="btn btn-primary">
+                                <button type="button" id="btn-GuardarHistorial" class="btn btn-primary">
                                 <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
                                     Guardar
                                 </button>
