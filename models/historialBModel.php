@@ -11,17 +11,17 @@ class HistorialB {
     public $j_nac;
     public $ediciones;
     public $fecha_p;
-    public $select_nac;
+    public $selec_nac;
 
     public function __construct($db) {
         $this->conn = $db;
     }
 
     public function create($data) {
-        $query = "INSERT INTO " . $this->table_name . " (fecha_i, federado, cual, estado, j_nac, ediciones, fecha_p, select_nac) VALUES (:fecha_i, :federado, :cual, :estado, :j_nac, :ediciones, :fecha_p, :select_nac)";
+        $query = "INSERT INTO " . $this->table_name . " (id_gloria, fecha_i, federado, cual, estado, j_nac, ediciones, fecha_p, selec_nac) VALUES (:id, :fecha_i, :federado, :cual, :estado, :j_nac, :ediciones, :fecha_p, :selec_nac)";
         $stmt = $this->conn->prepare($query);
 
-        // Sanitizar datos
+        $this->id = htmlspecialchars(strip_tags($data['id']));
         $this->fecha_i = htmlspecialchars(strip_tags($data['fecha_i']));
         $this->federado = htmlspecialchars(strip_tags($data['federado']));
         $this->cual = htmlspecialchars(strip_tags($data['cual']));
@@ -29,9 +29,9 @@ class HistorialB {
         $this->j_nac = htmlspecialchars(strip_tags($data['j_nac']));
         $this->ediciones = htmlspecialchars(strip_tags($data['ediciones']));
         $this->fecha_p = htmlspecialchars(strip_tags($data['fecha_p']));
-        $this->select_nac = htmlspecialchars(strip_tags($data['select_nac']));
+        $this->selec_nac = htmlspecialchars(strip_tags($data['selec_nac']));
 
-        // Vincular valores
+        $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":fecha_i", $this->fecha_i);
         $stmt->bindParam(":federado", $this->federado);
         $stmt->bindParam(":cual", $this->cual);
@@ -39,7 +39,7 @@ class HistorialB {
         $stmt->bindParam(":j_nac", $this->j_nac);
         $stmt->bindParam(":ediciones", $this->ediciones);
         $stmt->bindParam(":fecha_p", $this->fecha_p);
-        $stmt->bindParam(":select_nac", $this->select_nac);
+        $stmt->bindParam(":selec_nac", $this->selec_nac);
 
         if ($stmt->execute()) {
             return true;
@@ -55,10 +55,9 @@ class HistorialB {
     }
 
     public function update($data) {
-        $query = "UPDATE " . $this->table_name . " SET fecha_i = :fecha_i, federado = :federado, cual = :cual, estado = :estado, j_nac = :j_nac, ediciones = :ediciones, fecha_p = :fecha_p, select_nac = :select_nac WHERE id = :id";
+        $query = "UPDATE " . $this->table_name . " SET fecha_i = :fecha_i, federado = :federado, cual = :cual, estado = :estado, j_nac = :j_nac, ediciones = :ediciones, fecha_p = :fecha_p, selec_nac = :selec_nac WHERE id_gloria = :id";
         $stmt = $this->conn->prepare($query);
 
-        // Sanitizar datos
         $this->id = htmlspecialchars(strip_tags($data['id']));
         $this->fecha_i = htmlspecialchars(strip_tags($data['fecha_i']));
         $this->federado = htmlspecialchars(strip_tags($data['federado']));
@@ -67,9 +66,8 @@ class HistorialB {
         $this->j_nac = htmlspecialchars(strip_tags($data['j_nac']));
         $this->ediciones = htmlspecialchars(strip_tags($data['ediciones']));
         $this->fecha_p = htmlspecialchars(strip_tags($data['fecha_p']));
-        $this->select_nac = htmlspecialchars(strip_tags($data['select_nac']));
-     
-        // Vincular valores
+        $this->selec_nac = htmlspecialchars(strip_tags($data['selec_nac']));
+
         $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":fecha_i", $this->fecha_i);
         $stmt->bindParam(":federado", $this->federado);
@@ -78,8 +76,8 @@ class HistorialB {
         $stmt->bindParam(":j_nac", $this->j_nac);
         $stmt->bindParam(":ediciones", $this->ediciones);
         $stmt->bindParam(":fecha_p", $this->fecha_p);
-        $stmt->bindParam(":select_nac", $this->select_nac);
-     
+        $stmt->bindParam(":selec_nac", $this->selec_nac);
+
         if ($stmt->execute()) {
             return true;
         }

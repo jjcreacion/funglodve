@@ -71,7 +71,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" id="btn-Guardar" class="btn btn-primary">
+                                <button type="button" id="btn-GuardarSocial" class="btn btn-primary">
                                 <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
                                     Guardar
                                 </button>
@@ -83,10 +83,10 @@
 
                         <!-- Modal Beneficios -->
                         <div class="modal fade" id="ModalBeneficios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog custom-width-proyectos">
+                        <div class="modal-dialog custom-width-beneficios">
                             <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Beneficios Asignados</h5>
+                                <h5 class="modal-title" id="staticBackdropLabel">Asignar Beneficios</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">    
@@ -96,7 +96,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" id="btn-Guardar" class="btn btn-primary">
+                                <button type="button" id="btn-GuardarBeneficios" class="btn btn-primary">
                                 <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
                                     Guardar
                                 </button>
@@ -339,12 +339,13 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./lib/js/modalGlorias.js"></script>
-    <script src="./lib/js/Glorias.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
-
+    <script src="./lib/js/modalGlorias.js"></script>
+    <script src="./lib/js/Glorias.js"></script>
+    <script src="./lib/js/Social.js"></script>
+    <script src="./lib/js/Beneficios.js"></script>
   </body>
 </html>
 

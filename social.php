@@ -1,379 +1,490 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="lib/css/StylesHome.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  </head>
-  <body>
-  
-  <div >
       
-    <!-- Social -->
-    <form>
+<!-- Social -->
+<form>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active custom-tab" id="basic-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-id-card-clip"></i> Dependientes</button>
+    <button class="nav-link active custom-tab" id="basic-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-people-group"></i> Dependientes</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="nacional-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-building-flag"></i> Salud</button>
+    <button class="nav-link custom-tab" id="salud-tab" data-bs-toggle="tab" data-bs-target="#salud-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-staff-snake"></i> Salud</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="internacional-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><i class="fa-solid fa-globe"></i> Educación</button>
+    <button class="nav-link custom-tab" id="educacion-tab" data-bs-toggle="tab" data-bs-target="#educacion-tab-pane" type="button" role="tab" aria-controls="educacion-tab-pane" aria-selected="false"><i class="fa-solid fa-school"></i> Educación</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="otros-tab" data-bs-toggle="tab" data-bs-target="#otros-tab-pane" type="button" role="tab" aria-controls="otros-tab-pane" aria-selected="false"><i class="fa-solid fa-table"></i> Vivienda</button>
+    <button class="nav-link custom-tab" id="vivienda-tab" data-bs-toggle="tab" data-bs-target="#vivienda-tab-pane" type="button" role="tab" aria-controls="vivienda-tab-pane" aria-selected="false"><i class="fa-solid fa-house"></i> Vivienda</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="otros-tab" data-bs-toggle="tab" data-bs-target="#otros-tab-pane" type="button" role="tab" aria-controls="otros-tab-pane" aria-selected="false"><i class="fa-solid fa-table"></i> Alimentacion</button>
+    <button class="nav-link custom-tab" id="alimentacion-tab" data-bs-toggle="tab" data-bs-target="#alimentacion-tab-pane" type="button" role="tab" aria-controls="alimentacion-tab-pane" aria-selected="false"><i class="fa-solid fa-kitchen-set"></i> Alimentacion</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="otros-tab" data-bs-toggle="tab" data-bs-target="#otros-tab-pane" type="button" role="tab" aria-controls="otros-tab-pane" aria-selected="false"><i class="fa-solid fa-table"></i> Ivss</button>
+    <button class="nav-link custom-tab" id="ivss-tab" data-bs-toggle="tab" data-bs-target="#ivss-tab-pane" type="button" role="tab" aria-controls="ivss-tab-pane" aria-selected="false"><i class="fa-solid fa-id-card-clip"></i> Ivss</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="otros-tab" data-bs-toggle="tab" data-bs-target="#otros-tab-pane" type="button" role="tab" aria-controls="otros-tab-pane" aria-selected="false"><i class="fa-solid fa-table"></i> Recreación</button>
+    <button class="nav-link custom-tab" id="recreacion-tab" data-bs-toggle="tab" data-bs-target="#recreacion-tab-pane" type="button" role="tab" aria-controls="recreacion-tab-pane" aria-selected="false"><i class="fa-solid fa-person-falling"></i> Recreación</button>
   </li>
 </ul>
 
 <div class="tab-content" id="myTabContent"> 
+    <!-- Formulario Dependientes -->
     <div class="bg-white tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="basic-tab" tabindex="0">
-        <!-- Formulario Datos Basicos -->
-  
-        <div class="row">
-            <div class="col">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Fecha de inicio</label>
-                <input type="hidden" id="historialBasico" name="historialBasico" value="">
-                <input type="text" class="form-control" id="fecha_i" aria-describedby="emailHelp">
-                <small id="textErrorNombre" style="display:none;" class="form-text text-danger">Campo Requerido</small>
-            </div>
-            </div>
-            <div class="col">
-            <div class="form-group">
-                <label for="exampleInputEmail1">¿Estuvo Federado?</label>
-                <div class="d-flex align-items-center">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="federado" id="fopcion1" value="1">
-                        <label class="form-check-label" for="opcion1">Sí</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="federado" id="fopcion2" value="2">
-                        <label class="form-check-label" for="opcion2">No</label>
-                    </div>
-                </div>
-                <small id="textErrorUbicacion" style="display:none;" class="errorText form-text text-danger">Campo Requerido.</small>
-            </div>
-            </div>
-        </div><!-- Fin Row -->
-        <div class="row">
-            <div class="col">
-            <div class="form-group">
-                <label for="exampleInputEmail1">¿Cual Federación?</label>
-                <input type="text" class="form-control" id="cual" aria-describedby="emailHelp">
-            </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Estado Representado</label>
-                    <select id="estadoH" class="form-control">
-                    </select>
-                </div>
-            </div>
-        </div><!-- Fin Row -->
         
-        <div class="row">
-            <div class="col">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Juegos Nacionales</label>
-                <div class="d-flex align-items-center">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="j_nac" id="jopcion1" value="1">
-                        <label class="form-check-label" for="opcion1">Sí</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="j_nac" id="jopcion2" value="2">
-                        <label class="form-check-label" for="opcion2">No</label>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Numero de ediciones</label>
-                    <input type="number" class="form-control" id="ediciones" aria-describedby="emailHelp">
-                </div>
-            </div>
-        </div><!-- Fin Row -->
-
-        <div class="row">
-         <div class="col">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Fecha de Participación</label>
-                    <input type="text" class="form-control" id="fecha_p" aria-describedby="emailHelp">
-                </div>
-            </div>
-            <div class="col">
-            <div class="form-group">
-                <label for="exampleInputEmail1">¿Selección Nacional?</label>
-                <div class="d-flex align-items-center">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="selec_nac" id="sopcion1" value="1">
-                        <label class="form-check-label" for="opcion1">Sí</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="selec_nac" id="sopcion2" value="2">
-                        <label class="form-check-label" for="opcion2">No</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="selec_nac" id="sopcion3" value="3">
-                        <label class="form-check-label" for="opcion2">Preselección</label>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div><!-- Fin Row -->
-                                
-    <!-- Fin Datos Basicos-->
+    </div>                            
+    <!-- Fin dependientes-->
     
-    </div> 
-    <div class="bg-white tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="nacional-tab" tabindex="0">
-      <!--Formulario Juegos Nacionales -->  
-  <div class="row">
-    <div class="col">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Campeonatos</label>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input type="hidden" id="historialNacional" name="historialNacional" value="">
-                <input class="form-check-input" type="checkbox" name="distrital" id="distrital" value="1">
-                <label class="form-check-label" for="opcion1">Distrital </label>
+    <!--Formulario Salud -->  
+    <div class="bg-white tab-pane fade" id="salud-tab-pane" role="tabpanel" aria-labelledby="salud-tab" tabindex="0">
+      <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Presenta alguna enfermedad?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="enfermedad" id="enf_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="enfermedad" id="enf_fopcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="estatal" id="estatal" value="2">
-                <label class="form-check-label" for="opcion2">Estatal </label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="interclubes" id="interclubes" value="2">
-                <label class="form-check-label" for="opcion2">Inter-Clubes </label>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Especifique</label>
+                <input type="hidden" id="idGloriaSocial" name="idGloriaSocial" value="">
+                <input type="hidden" id="salud" name="salud" value="">
+                <input type="hidden" id="educacion" name="educacion" value="">
+                <input type="hidden" id="vivienda" name="vivienda" value="">
+                <input type="hidden" id="alimentacion" name="alimentacion" value="">
+                <input type="hidden" id="ivss" name="ivss" value="">
+                <input type="hidden" id="recreacion" name="recreacion" value="">
+                <input type="text" class="form-control" id="especifique" aria-describedby="emailHelp">
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cnacionales" id="cnacionales" value="2">
-                <label class="form-check-label" for="opcion2">Nacionales  </label>
             </div>
-        </div>
-    </div>
-    </div>
-    </div><!-- Fin Row -->
-
-    <div class="row">
-    <div class="col">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Juegos</label>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jnacionales" id="jnacionales" value="1">
-                <label class="form-check-label" for="opcion1">Nacionales</label>
+        </div><!-- Fin Row -->
+        <div class="row">
+            
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Diagnóstico médico</label>
+                <input type="text" class="form-control" id="diagnostico" aria-describedby="emailHelp">
             </div>
-        </div>
-    </div>
-    </div>
-    </div><!-- Fin Row -->
-    <!-- Fin Nacionales-->
-  
-    </div> 
-    <div class="bg-white tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="internacional-tab" tabindex="0">
-    <!--Juegos Internacionales -->  
-  <div class="row">
-    <div class="col">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Campeonatos</label>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-            <input type="hidden" id="historialInternacional" name="historialInternacional" value="">
-                <input class="form-check-input" type="checkbox" name="csuda" id="csuda" value="1">
-                <label class="form-check-label" for="opcion1">Sudamericanos </label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="ccentro" id="ccentro" value="1">
-                <label class="form-check-label" for="opcion2">Centroamericanos </label>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Tratamiento</label>
+                <input type="text" class="form-control" id="tratamiento" aria-describedby="emailHelp">
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="clatino" id="clatino" value="1">
-                <label class="form-check-label" for="opcion2">Latinomaericanos </label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cboliva" id="cboliva" value="1">
-                <label class="form-check-label" for="opcion2">Bolivarianos </label>
+        </div><!-- Fin Row -->
+        <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Cumple con el tratamiento?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cumple" id="cum_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cumple" id="cum_fopcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cpana" id="cpana" value="1">
-                <label class="form-check-label" for="opcion1">Panamericanos </label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cibero" id="cibero" value="1">
-                <label class="form-check-label" for="opcion2">Iberoamericanos </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cligas" id="cligas" value="1">
-                <label class="form-check-label" for="opcion2">Ligas Continentales  </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cmundiales" id="cmundiales" value="1">
-                <label class="form-check-label" for="opcion2">Mundiales </label>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- Fin Row -->
-    <div class="row">
-    <div class="col">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Invitacionales</label>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="invitacionales" id="invitacionales" value="1">
-                <label class="form-check-label" for="opcion1">Invitacionales</label>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div><!-- Fin Row -->
-
-    <div class="row">
-    <div class="col">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Juegos</label>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jsuda" id="jsuda" value="1">
-                <label class="form-check-label" for="opcion1">Sudamericanos </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jcentro" id="jcentro" value="1">
-                <label class="form-check-label" for="opcion2">Centroamericanos </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jlatino" id="jlatino" value="1">
-                <label class="form-check-label" for="opcion2">Latinomaericanos </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jboliva" id="jboliva" value="1">
-                <label class="form-check-label" for="opcion2">Bolivarianos </label>
-            </div>
-        </div>
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jpana" id="jpana" value="1">
-                <label class="form-check-label" for="opcion1">Panamericanos </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jalba" id="jalba" value="1">
-                <label class="form-check-label" for="opcion2">ALba </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="jjoo" id="jjoo" value="1">
-                <label class="form-check-label" for="opcion2">Olimpicos  </label>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div><!-- Fin Row -->
-    <!-- Fin Internacionales-->
- 
-    </div> 
-    <div class="bg-white tab-pane fade p-3" id="otros-tab-pane" role="tabpanel" aria-labelledby="otros-tab" tabindex="0">
-     <!-- Formulario otras actividades -->
-      <!-- Fin Row -->
-    <div class="row">
-    <div class="col">
-    <div class="form-group">
-        <div class="d-flex align-items-center">
-            <div class="form-check form-check-inline">
-                <input type="hidden" id="idGloriaHistorial" name="idGloriaHistorial" value="">
-                <input type="hidden" id="historialOtros" name="historialOtros" value="">
-                <input class="form-check-input" type="checkbox" name="entrenador" id="entrenador" value="1">
-                <label class="form-check-label" for="opcion1">Entrenador</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="arbitro" id="arbitro" value="1">
-                <label class="form-check-label" for="opcion1">Árbitro</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="juez" id="juez" value="1">
-                <label class="form-check-label" for="opcion1">Juez</label>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div><!-- Fin Row -->
-    <!-- Fin Row -->
-        
-    <div class="row">
             <div class="col">
             <div class="form-group">
                 <label for="exampleInputEmail1">Institución</label>
-                <input type="text" class="form-control" id="oinstitucion" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="institucion" aria-describedby="emailHelp">
             </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Tiempo de servicio</label>
-                    <input type="tiempo" class="form-control" id="otiempo" aria-describedby="emailHelp">
-                </div>
             </div>
         </div><!-- Fin Row -->
-
-    <div class="row">
-    <div class="col">
+        <div class="row">
+            <div class="col">
             <div class="form-group">
-                <label for="exampleInputEmail1">¿Dirigente deportivo?</label>
+                <label for="exampleInputEmail1">¿Se encuentra discapacitado físicamente?</label>
                 <div class="d-flex align-items-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="dopcion1" id="dopcion1" value="1">
+                        <input class="form-check-input" type="radio" name="discapacitado" id="disc_opcion1" value="1">
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="dopcion2" id="dopcion2" value="2">
+                        <input class="form-check-input" type="radio" name="discapacitado" id="disc_opcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                 </div>
             </div>
             </div>
-    </div><!-- Fin Row -->  
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Indique</label>
+                <input type="text" class="form-control" id="indique" name="indique" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div><!-- Fin Row -->  
+    </div>
+    <!-- Fin Salud-->  
+    <!--Formulario Educación -->  
+    <div class="bg-white tab-pane fade" id="educacion-tab-pane" role="tabpanel" aria-labelledby="educacion-tab" tabindex="0">  
     <div class="row">
             <div class="col">
             <div class="form-group">
-                <label for="exampleInputEmail1">Institución</label>
-                <input type="text" class="form-control" id="dinstitucion" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1">Grado de Instrucción</label>
+                <input type="text" class="form-control" id="grado" aria-describedby="emailHelp">
             </div>
             </div>
             <div class="col">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Tiempo de servicio</label>
-                    <input type="text" class="form-control" id="dtiempo" aria-describedby="emailHelp">
+            <div class="form-group">
+           </div>
+            </div>      
+    </div><!-- Fin Row -->
+    <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Estudia actualmente?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="estudia" id="estu_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="estudia" id="estu_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
                 </div>
             </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Indique</label>
+                <input type="text" class="form-control" id="indiqueEducacion" aria-describedby="emailHelp">
+            </div>
+            </div>
         </div><!-- Fin Row -->
-
+        <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Pertenece a alguna misión?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="mision" id="misi_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="mision" id="misi_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Indique</label>
+               <input type="text" class="form-control" id="cualMision" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div><!-- Fin Row -->
+    </div> 
+    <!-- Fin Educación-->
+    <!-- Formulario Vivienda -->  
+    <div class="bg-white tab-pane fade p-3" id="vivienda-tab-pane" role="tabpanel" aria-labelledby="vivienda-tab" tabindex="0">
+      <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Posee vivienda propia?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="posee" id="pos_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="posee" id="pos_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Ubicación</label>
+                <input type="text" class="form-control" id="ubicacion" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div><!-- Fin Row -->
+        <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Esta en buenas condiciones?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="condiciones" id="cond_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="condiciones" id="cond_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Especifique</label>
+                <input type="text" class="form-control" id="especifiqueVivienda" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div><!-- Fin Row -->
+        <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Tipo</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipo" id="tipo_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Casa</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipo" id="tipo_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">Apartamento</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Antiguedad</label>
+                <input type="text" class="form-control" id="anyos" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div><!-- Fin Row -->
     </div>
-</div>
+    <!-- Fin vivienda -->
+    <!-- Formulario Alimentaciòn -->
+    <div class="bg-white tab-pane fade p-3" id="alimentacion-tab-pane" role="tabpanel" aria-labelledby="alimentacion-tab" tabindex="0">
+      <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Mantiene una alimentación balanceada?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="balanceada" id="bal_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="balanceada" id="bal_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Posee alguna dieta??</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="dieta" id="diet_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="dieta" id="diet_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div><!-- Fin Row -->
+        <div class="row">
+        <div class="col">
+            <div class="form-group">
+            <label for="exampleInputEmail1">Lugar donde se alimenta:</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lcasa" id="lcasa" value="1">
+                        <label class="form-check-label" for="opcion1">Casa</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lfundacion" id="lfundacion" value="1">
+                        <label class="form-check-label" for="opcion1">Fundación</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lotro" id="lotro" value="1">
+                        <label class="form-check-label" for="opcion1">Otro</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+              
+            </div>
+            </div>
+        </div><!-- Fin Row -->
+    </div>    
+    <!-- Fin Alimentación -->
+    <!-- Formulario Ivss -->
+    <div class="bg-white tab-pane fade p-3" id="ivss-tab-pane" role="tabpanel" aria-labelledby="ivss-tab" tabindex="0">
+      <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Cotiza en el IVSS?</label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cotiza" id="cot_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cotiza" id="cot_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                
+            </div>
+            </div>
+        </div><!-- Fin Row -->
+        <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Semanas</label>
+                <input type="text" class="form-control" id="semanas" aria-describedby="emailHelp">
+            </div>
+            </div>
 
-    <!-- Fin social -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="lib/js/home.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Estado</label>
+                <select name="ivss_estado" id="estadoIvss" class="form-control" >
+                    <option value="1">Activo</option>
+                    <option value="2">Cesante</option>
+                    <option value="3">Pensionado</option>
+                    <option value="4">No Registrado</option>
+                </select>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Empresa</label>
+                <input type="text" class="form-control" id="empresa" aria-describedby="emailHelp">
+            </div>
+            </div>
+
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Años de servicio</label>
+                <input type="text" class="form-control" id="anyosIvss" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div>
+    </div>      
+    <!-- Fin IVSS -->
+     <!-- Formulrio Recreacion-->
+    <div class="bg-white tab-pane fade p-3" id="recreacion-tab-pane" role="tabpanel" aria-labelledby="recreacion-tab" tabindex="0">
+    <div class="row">
+    <div class="col">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Actividades recreativas que más disfruta: </label>
+        <div class="d-flex align-items-center">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="pasear" id="pasear" value="1">
+                <label class="form-check-label" for="opcion1">Pasear </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="jugar" id="jugar" value="1">
+                <label class="form-check-label" for="opcion2">Jugar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="compartir" id="compartir" value="1">
+                <label class="form-check-label" for="opcion2">Compartir en familia </label>
+            </div>    
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="playa" id="playa" value="1">
+                <label class="form-check-label" for="opcion1">Playa </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="cine" id="cine" value="1">
+                <label class="form-check-label" for="opcion2">Cine </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="rec_otro" id="rec_otro" value="1">
+                <label class="form-check-label" for="opcion2">Otro  </label>
+            </div>  
+        </div>
+    </div>
+    </div>
+
     
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    </div>
+    <div class="row">
+    <div class="col">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Cualidades mas resaltantes:</label>
+        <div class="d-flex align-items-center">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="cantar" id="cantar" value="1">
+                <label class="form-check-label" for="opcion1">Cantar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="bailar" id="bailar" value="1">
+                <label class="form-check-label" for="opcion2">Bailar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="actuar" id="actuar" value="1">
+                <label class="form-check-label" for="opcion2">Actuar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="recitar" id="recitar" value="1">
+                <label class="form-check-label" for="opcion2">Recitar </label>
+            </div>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="escribir" id="escribir" value="1">
+                <label class="form-check-label" for="opcion1">Escribir </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="pintar" id="pintar" value="1">
+                <label class="form-check-label" for="opcion2">Pintar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="cotro" id="cotro" value="1">
+                <label class="form-check-label" for="opcion2">Otro  </label>
+            </div>  
+        </div>
+    </div>
+    </div>
+    </div>
 
-  </body>
-</html>
+    <div class="row">
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Pertenece a algún grupo deportivo, cultural, religioso? </label>
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pertenece" id="grupo_opcion1" value="1">
+                        <label class="form-check-label" for="opcion1">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pertenece" id="grupo_opcion2" value="2">
+                        <label class="form-check-label" for="opcion2">No</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Indique</label>
+                <input type="text" class="form-control" id="indiqueRecreacion" aria-describedby="emailHelp">
+            </div>
+            </div>
+        </div><!-- Fin Row -->    
+    </div>
+    <!-- Fin Recreacion -->
+    
+</div>    
+</form>

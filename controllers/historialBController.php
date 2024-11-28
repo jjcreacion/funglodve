@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $j_nac = $_POST['j_nac'];
     $ediciones = $_POST['ediciones'];
     $fecha_p = $_POST['fecha_p'];
-    $select_nac = $_POST['select_nac'];
+    $selec_nac = $_POST['selec_nac'];
     $insert = $_POST['insert'];
 
     $data = [
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'j_nac' => $j_nac,
         'ediciones' => $ediciones,
         'fecha_p' => $fecha_p,
-        'select_nac' => $select_nac,
+        'selec_nac' => $selec_nac,
     ];
 
     if ($insert == 'true') {

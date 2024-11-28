@@ -129,6 +129,10 @@ h2, .h2 {
     max-width: 70% !important; /* El !important asegura que este estilo tenga prioridad */
 }
 
+.custom-width-beneficios {
+    max-width: 50% !important; /* El !important asegura que este estilo tenga prioridad */
+}
+
 .card-header {
     padding: 0.1rem 0.1rem;
     margin-bottom: 0;

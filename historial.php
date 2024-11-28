@@ -128,15 +128,15 @@
                 <label class="form-check-label" for="opcion1">Distrital </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="estatal" id="estatal" value="2">
+                <input class="form-check-input" type="checkbox" name="estatal" id="estatal" value="1">
                 <label class="form-check-label" for="opcion2">Estatal </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="interclubes" id="interclubes" value="2">
+                <input class="form-check-input" type="checkbox" name="interclubes" id="interclubes" value="1">
                 <label class="form-check-label" for="opcion2">Inter-Clubes </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="cnacionales" id="cnacionales" value="2">
+                <input class="form-check-input" type="checkbox" name="cnacionales" id="cnacionales" value="1">
                 <label class="form-check-label" for="opcion2">Nacionales  </label>
             </div>
         </div>
@@ -311,11 +311,11 @@
                 <label for="exampleInputEmail1">¿Dirigente deportivo?</label>
                 <div class="d-flex align-items-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="dopcion1" id="dopcion1" value="1">
+                        <input class="form-check-input" type="radio" name="dirigente" id="dopcion1" value="1">
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="dopcion2" id="dopcion2" value="2">
+                        <input class="form-check-input" type="radio" name="dirigente" id="dopcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                 </div>

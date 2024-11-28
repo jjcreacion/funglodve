@@ -45,8 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $entrenador = $_POST['entrenador'];
     $arbitro = $_POST['arbitro'];
     $juez = $_POST['juez'];
-    $institucion = $_POST['institucion'];
-    $tiempo = $_POST['tiempo'];
+    $oinstitucion = $_POST['oinstitucion'];
+    $otiempo = $_POST['otiempo'];
     $dirigente = $_POST['dirigente'];
     $dinstitucion = $_POST['dinstitucion'];
     $dtiempo = $_POST['dtiempo'];
@@ -57,13 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'entrenador' => $entrenador,
         'arbitro' => $arbitro,
         'juez' => $juez,
-        'institucion' => $institucion,
-        'tiempo' => $tiempo,
+        'oinstitucion' => $oinstitucion,
+        'otiempo' => $otiempo,
         'dirigente' => $dirigente,
         'dinstitucion' => $dinstitucion,
         'dtiempo' => $dtiempo,
     ];
-
+   
     if ($insert == 'true') {
         if ($obj->Create($data)) {
             echo json_encode(['message' => 'Historial created successfully']);

@@ -26,10 +26,10 @@ class HistorialI {
     }
 
     public function create($data) {
-        $query = "INSERT INTO " . $this->table_name . " (csuda, ccentro, clatino, cboliva, cpana, cibero, cligas, cmundiales, invitacionales, jsuda, jcentro, jlatino, jboliva, jpana, jalba, jjoo) VALUES (:csuda, :ccentro, :clatino, :cboliva, :cpana, :cibero, :cligas, :cmundiales, :invitacionales, :jsuda, :jcentro, :jlatino, :jboliva, :jpana, :jalba, :jjoo)";
+        $query = "INSERT INTO " . $this->table_name . " (id_gloria, csuda, ccentro, clatino, cboliva, cpana, cibero, cligas, cmundiales, invitacionales, jsuda, jcentro, jlatino, jboliva, jpana, jalba, jjoo) VALUES (:id, :csuda, :ccentro, :clatino, :cboliva, :cpana, :cibero, :cligas, :cmundiales, :invitacionales, :jsuda, :jcentro, :jlatino, :jboliva, :jpana, :jalba, :jjoo)";
         $stmt = $this->conn->prepare($query);
 
-        // Sanitizar datos
+        $this->id = htmlspecialchars(strip_tags($data['id']));
         $this->csuda = htmlspecialchars(strip_tags($data['csuda']));
         $this->ccentro = htmlspecialchars(strip_tags($data['ccentro']));
         $this->clatino = htmlspecialchars(strip_tags($data['clatino']));
@@ -47,7 +47,7 @@ class HistorialI {
         $this->jalba = htmlspecialchars(strip_tags($data['jalba']));
         $this->jjoo = htmlspecialchars(strip_tags($data['jjoo']));
 
-        // Vincular valores
+        $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":csuda", $this->csuda);
         $stmt->bindParam(":ccentro", $this->ccentro);
         $stmt->bindParam(":clatino", $this->clatino);
@@ -79,10 +79,9 @@ class HistorialI {
     }
 
     public function update($data) {
-        $query = "UPDATE " . $this->table_name . " SET csuda = :csuda, ccentro = :ccentro, clatino = :clatino, cboliva = :cboliva, cpana = :cpana, cibero = :cibero, cligas = :cligas, cmundiales = :cmundiales, invitacionales = :invitacionales, jsuda = :jsuda, jcentro = :jcentro, jlatino = :jlatino, jboliva = :jboliva, jpana = :jpana, jalba = :jalba, jjoo = :jjoo WHERE id = :id";
+        $query = "UPDATE " . $this->table_name . " SET csuda = :csuda, ccentro = :ccentro, clatino = :clatino, cboliva = :cboliva, cpana = :cpana, cibero = :cibero, cligas = :cligas, cmundiales = :cmundiales, invitacionales = :invitacionales, jsuda = :jsuda, jcentro = :jcentro, jlatino = :jlatino, jboliva = :jboliva, jpana = :jpana, jalba = :jalba, jjoo = :jjoo WHERE id_gloria = :id";
         $stmt = $this->conn->prepare($query);
 
-        // Sanitizar datos
         $this->id = htmlspecialchars(strip_tags($data['id']));
         $this->csuda = htmlspecialchars(strip_tags($data['csuda']));
         $this->ccentro = htmlspecialchars(strip_tags($data['ccentro']));
@@ -101,7 +100,6 @@ class HistorialI {
         $this->jalba = htmlspecialchars(strip_tags($data['jalba']));
         $this->jjoo = htmlspecialchars(strip_tags($data['jjoo']));
 
-        // Vincular valores
         $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":csuda", $this->csuda);
         $stmt->bindParam(":ccentro", $this->ccentro);
