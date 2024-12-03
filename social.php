@@ -3,10 +3,7 @@
 <form>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active custom-tab" id="basic-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-people-group"></i> Dependientes</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link custom-tab" id="salud-tab" data-bs-toggle="tab" data-bs-target="#salud-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-staff-snake"></i> Salud</button>
+    <button class="nav-link active custom-tab" id="salud-tab" data-bs-toggle="tab" data-bs-target="#salud-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-staff-snake"></i> Salud</button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link custom-tab" id="educacion-tab" data-bs-toggle="tab" data-bs-target="#educacion-tab-pane" type="button" role="tab" aria-controls="educacion-tab-pane" aria-selected="false"><i class="fa-solid fa-school"></i> Educación</button>
@@ -26,14 +23,9 @@
 </ul>
 
 <div class="tab-content" id="myTabContent"> 
-    <!-- Formulario Dependientes -->
-    <div class="bg-white tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="basic-tab" tabindex="0">
-        
-    </div>                            
-    <!-- Fin dependientes-->
     
     <!--Formulario Salud -->  
-    <div class="bg-white tab-pane fade" id="salud-tab-pane" role="tabpanel" aria-labelledby="salud-tab" tabindex="0">
+    <div class="bg-white tab-pane fade show active" id="salud-tab-pane" role="tabpanel" aria-labelledby="salud-tab" tabindex="0">
       <div class="row">
             <div class="col">
             <div class="form-group">

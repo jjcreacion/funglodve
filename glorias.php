@@ -71,7 +71,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" id="btn-GuardarBeneficios" class="btn btn-primary">
+                                <button type="button" id="btn-GuardarSocial" class="btn btn-primary">
                                 <span class="spinner-grow spinner-grow-sm" style="display: none;" aria-hidden="true"></span>    
                                     Guardar
                                 </button>
@@ -81,7 +81,7 @@
                         </div>
                         <!-- Fin Modal Social -->
 
-                        <!-- Modal Social -->
+                        <!-- Modal Dependientes -->
                         <div class="modal fade" id="ModalDependientes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog custom-width-proyectos">
                             <div class="modal-content">
@@ -104,7 +104,7 @@
                         </div>
                         </div>
                         </div>
-                        <!-- Fin Modal Social -->
+                        <!-- Fin Modal Dependientes -->
 
                         <!-- Modal Beneficios -->
                         <div class="modal fade" id="ModalBeneficios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

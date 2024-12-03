@@ -42,14 +42,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
-        'id_gloria' => $_POST['id_gloria'],
-        'nombre' => $_POST['nombre'],
-        'parentesco' => $_POST['parentesco'],
-        'grado' => $_POST['grado'],
-        'ocupacion' => $_POST['ocupacion'],
-        'ingreso' => $_POST['ingreso'],
-        'telefono' => $_POST['telefono'],
-        'f_nac' => $_POST['f_nac']
+        'id_gloria' => $_POST['idGloria'],
+        'id_dependiente'=> $_POST['idDependiente'],
+        'nombre' => $_POST['nombreDep'],
+        'parentesco' => $_POST['parentescoDep'],
+        'grado' => $_POST['gradoDep'],
+        'ocupacion' => $_POST['ocupacionDep'],
+        'ingreso' => $_POST['ingresoDep'],
+        'telefono' => $_POST['telefonoDep'],
+        'f_nac' => $_POST['f_nacDep']
     ];
     
     $insert = $_POST['insert'];
@@ -72,9 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     parse_str(file_get_contents("php://input"), $data);
-    $id = $data['id'];  
+    $idDependiente = $data['idDependiente'];  
 
-    if ($dependiente->Delete($id)) {
+    if ($dependiente->Delete($idDependiente)) {
         echo json_encode(['message' => 'Dependiente eliminado exitosamente']);
     } else {
         echo json_encode(['message' => 'Error al eliminar el dependiente']);
