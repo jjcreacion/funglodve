@@ -35,14 +35,16 @@
 </div>
 
 <div class='card' id="modalCrearDependientes">
-    <div class='card-header'>
-        <h2><i class="fas fa-users"></i> Datos del Familiar </h2>
+    <div class='card-header d-flex justify-content-between align-items-center'>
+        <h4><i class="fas fa-users"></i> Datos del Familiar </h4>
+        <i class="fa-solid fa-arrow-left" name="btn-Retroceso" id="btn-Retroceso" style="cursor: pointer"></i>
     </div>
     <div class='card-body'>
     <div class="row">
         <div class="col">
             <div class="form-group">
                 <input type="hidden" id="idGloriaDependiente" name="idGloriaDependiente" value="">
+                <input type="hidden" id="Dependiente" name="Dependiente" value="">
                 <input type="hidden" id="idDependiente" name="idDependiente" value="">
                 <label for="nombre">Nombre y Apellido</label>
                 <input type="text" class="form-control" id="nombreDep" name="nombreDep">

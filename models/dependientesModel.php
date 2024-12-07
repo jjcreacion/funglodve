@@ -40,7 +40,7 @@ class Dependiente {
         $query = "UPDATE " . $this->table_name . " SET id_gloria = :id_gloria, nombre = :nombre, parentesco = :parentesco, grado = :grado, ocupacion = :ocupacion, ingreso = :ingreso, telefono = :telefono, f_nac = :f_nac WHERE id = :id";
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bindParam(":id", $data['id']);
+        $stmt->bindParam(":id", $data['id_dependiente']);
         $stmt->bindParam(":id_gloria", $data['id_gloria']);
         $stmt->bindParam(":nombre", $data['nombre']);
         $stmt->bindParam(":parentesco", $data['parentesco']);
@@ -70,11 +70,19 @@ class Dependiente {
     }
 
     public function GetById($id){
-        $sql = "SELECT * FROM " . $this->table_name . " WHERE id_gloria = :id"; // Espacio entre 'glorias' y 'WHERE'
+        $sql = "SELECT * FROM " . $this->table_name . " WHERE id_gloria = :id"; 
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function GetByIdDep($id){
+        $sql = "SELECT * FROM " . $this->table_name . " WHERE id = :id"; 
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
 ?>

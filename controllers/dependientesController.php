@@ -31,13 +31,24 @@ class DependientesController {
     public function GetById($id){
         return $this->model->GetById($id);
     }
+
+    public function GetByIdDep($id){
+        return $this->model->GetByIdDep($id);
+    }
 }
 
 $dependiente = new DependientesController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $id = $_GET['idgloria'];
-    echo json_encode($dependiente->GetById($id));
+    
+    if(isset($_GET['idgloria'])){
+        $id = $_GET['idgloria'];
+        echo json_encode($dependiente->GetById($id));
+    }
+    else{
+        $id = $_GET['idDependiente'];
+        echo json_encode($dependiente->GetByIdDep($id));
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -62,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(['message' => 'Error al crear el dependiente']);
         }
     } else {
-        $data['id'] = $_POST['id'];
         if ($dependiente->Update($data)) {
             echo json_encode(['message' => 'Dependiente actualizado exitosamente']);
         } else {
