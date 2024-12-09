@@ -69,7 +69,7 @@
                     <div class="row">
                       <div class="col-md-12">
                              <div class="card">
-                             <canvas id="myChart"></canvas>
+                             <canvas id="myChart" width="400" height="100"></canvas> 
                              </div>
                         </div>
                       </div>

@@ -116,11 +116,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     
     parse_str(file_get_contents("php://input"), $data);
     $idgloria = $data['idgloria'];  
-   
+    echo $idgloria;
+
     if ($glo->Delete($idgloria)) {
-        echo json_encode(['message' => 'Proyectos created successfully']);
+        echo json_encode(['message' => 'Glorias delete successfully']);
     } else {
-        echo json_encode(['message' => 'Failed to create Proyectos']);
+        echo json_encode(['message' => 'Failed to delete Gloria']);
     }
 }
 

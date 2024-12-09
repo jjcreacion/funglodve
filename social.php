@@ -36,7 +36,7 @@
                         <label class="form-check-label" for="opcion1">Sí</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="enfermedad" id="enf_fopcion2" value="2">
+                        <input class="form-check-input" type="radio" name="enfermedad" id="enf_opcion2" value="2">
                         <label class="form-check-label" for="opcion2">No</label>
                     </div>
                 </div>

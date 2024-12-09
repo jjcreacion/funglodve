@@ -75,5 +75,18 @@ class Alimentacion {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function ListBeneficiosNomina($id_nomina) {
+        $query = "SELECT b.id, b.id_gloria, b.id_nomina, g.cedula, g.nombre, g.apellido
+                  FROM " . $this->table_name . " b
+                  JOIN glorias g ON b.id_gloria::text = g.id::text
+                  WHERE b.id_nomina = :id_nomina";
+        $stmt = $this->conn->prepare($query);
+    
+        $stmt->bindParam(":id_nomina", $id_nomina, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }    
+    
 }
 ?>

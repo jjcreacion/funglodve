@@ -31,13 +31,23 @@ class beneficiosController {
     public function GetById($id) {
         return $this->model->GetById($id);
     }
+    
+    public function ListBeneficiosNomina($id_nomina){
+        return $this->model->ListBeneficiosNomina($id_nomina);
+    }
 }
 
 $obj = new beneficiosController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $id = $_GET['id'];
-    echo json_encode($obj->GetById($id));
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        echo json_encode($obj->GetById($id));
+    }
+    else{
+        $id_nomina = $_GET['idnomina'];
+        echo json_encode($obj->ListBeneficiosNomina($id_nomina));
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
