@@ -45,8 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode($obj->GetById($id));
     }
     else{
+        if(isset($_GET['idnomina'])){
         $id_nomina = $_GET['idnomina'];
         echo json_encode($obj->ListBeneficiosNomina($id_nomina));
+        }
+        else{
+            echo json_encode($obj->ListAll());
+        }
     }
 }
 
