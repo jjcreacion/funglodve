@@ -28,7 +28,7 @@
                 <div class='card'>
                     <div class='card-body'>
 
-                    <canvas id="myChart" width="400" height="80"></canvas> 
+                    <canvas id="myChart" width="400" height="100"></canvas> 
 
                     </div>
                 </div>
@@ -98,37 +98,44 @@
             
         </div>
     </div>
-
-     <!-- Modal Listado-->
-     <div class="modal fade" id="staticBackdropListado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- Modal Listado-->
+<div class="modal fade" id="staticBackdropListado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog custom-width-proyectos">
         <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Listado</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <h4 id="nomina-title" class="text-center">Reporte total</h4>
-        <table class="table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-            <th scope="col">N°</th>
-            <th scope="col">Cédula</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            </tr>
-        </thead>
-        <tbody id="beneficios-body">
-
-        </tbody>
-        </table>
-        </div>
-        <div class="modal-footer">
-            <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4 id="nomina-title" class="text-center">REPORTE TOTAL:  </h4>
+                    <!-- Contenedor para aplicar scroll -->
+                    <div class="table-responsive" style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
+                    <div class="row justify-content-center">
+                
+                      <table class="table-striped table-bordered" style="width:90%">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">Cédula</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listado-body">
+                                <!-- Filas se agregarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn-Cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
         </div>
     </div>
-        <!--Fin modal Listado-->
+</div>
+<!--Fin modal Listado-->
+
 
 </div>
 
