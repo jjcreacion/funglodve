@@ -97,7 +97,7 @@ h2, .h2 {
 }
 
 .custom-width {
-    max-width: 80%; /* Puedes ajustar el porcentaje según tus necesidades */
+    max-width: 80%; /* Ajustar tama;o del modal */
 }
 
 .card {
@@ -166,6 +166,10 @@ h2, .h2 {
     -ms-flex-positive: 2;
     flex-grow: 2;
     margin-top: 84px;
+}
+
+.row-perfiles{
+    margin: 0px;
 }
 
 .dashboard-content {

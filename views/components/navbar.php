@@ -22,12 +22,15 @@
         <i class="fas fa-chart-bar"></i>
         Proyectos
         </a>
+        <a href="nominas.php" class="dashboard-nav-item <?php echo $activePage == 'nominas' ? 'active' : ''; ?>""><i class="fas fa-file-invoice "></i>
+        Nominas 
+        </a>
         <a href="reportes.php" class="dashboard-nav-item <?php echo $activePage == 'reportes' ? 'active' : ''; ?>"">
         <i class="fas fa-chart-pie"></i>
         Reportes
         </a>
-        <a href="nominas.php" class="dashboard-nav-item <?php echo $activePage == 'nominas' ? 'active' : ''; ?>""><i class="fas fa-file-invoice "></i>
-        Nominas 
+        <a href="perfiles.php" class="dashboard-nav-item <?php echo $activePage == 'perfiles' ? 'active' : ''; ?>""><i class="fas fa-address-card"></i>
+        Perfiles 
         </a>
         <a href="usuarios.php" class="dashboard-nav-item <?php echo $activePage == 'usuarios' ? 'active' : ''; ?>""><i class="fas fa-user-tie"></i>
         Usuarios 
