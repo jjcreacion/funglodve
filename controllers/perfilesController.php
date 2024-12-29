@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE') { 
     parse_str(file_get_contents("php://input"), $data);
-    $id = $data['id'];  
+    $id = $data['idperfil'];  
    
     if ($obj->Delete($id)) {
         echo json_encode(['message' => 'Perfil eliminado con éxito']);
