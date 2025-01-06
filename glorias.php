@@ -28,7 +28,9 @@
                         
                         <div class='card-header'>
                             <h2><i class="fas fa-medal"></i> Gestión de Glorias Deportivas</h2>
-                                <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Agregar</button>
+                            <?php if (strpos($perfil['modgl'], 'C') !== false) { ?>                            
+                            <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Nuevo Registro</button>
+                            <?php } ?>                            
                         </div>
                         <div class='card-body'>
                         <!-- Modal Historial -->
@@ -146,6 +148,7 @@
                                 <div class="form-group">
                                     <!-- Id -->
                                     <input type="hidden" id="idgloria" name="idgloria" value="">
+                                    <input type="hidden" id="modgl" name="modgl" value="<?php echo $perfil['modgl']; ?>">
                                     <label for="exampleInputEmail1">Cédula</label>
                                     <input type="text" class="form-control" id="cedula" aria-describedby="emailHelp">
                                     <small id="textErrorCedula" style="display:none;" class="form-text text-danger">Campo Requerido</small>

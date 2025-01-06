@@ -28,7 +28,9 @@
                         
                         <div class='card-header'>
                             <h2><i class="fas fa-hotel"></i> Gestión de Instituciones </h2>
+                            <?php if (strpos($perfil['modin'], 'C') !== false) { ?>                            
                                 <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Crear Nueva</button>
+                            <?php } ?>     
                         </div>
                         <div class='card-body'>
 
@@ -46,6 +48,7 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <!-- Id -->
+                                    <input type="hidden" id="modin" name="modin" value="<?php echo $perfil['modin']; ?>">
                                     <input type="hidden" id="idinstitucion" name="idinstitucion" value="">
                                     <label for="exampleInputEmail1">Nombre</label>
                                     <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">

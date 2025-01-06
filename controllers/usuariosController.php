@@ -27,6 +27,10 @@ class usuariosController {
     public function Delete($id) {
         return $this->model->delete($id);
     }
+
+    public function validarU($username, $password) {
+        return $this->model->verifyPassword($username, $password);
+    }
 }
 
 $obj = new usuariosController();

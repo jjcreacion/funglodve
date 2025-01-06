@@ -28,7 +28,9 @@
                         
                         <div class='card-header'>
                             <h2><i class="fas fa-sitemap"></i> Gestión de Subsedes </h2>
-                                <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Crear Nueva</button>
+                            <?php if (strpos($perfil['modss'], 'C') !== false) { ?>                            
+                            <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Crear Nueva</button>
+                            <?php } ?> 
                         </div>
                         <div class='card-body'>
 
@@ -46,6 +48,7 @@
                                 <div class="col">
                                 <div class="form-group">
                                     <!-- Id -->
+                                    <input type="hidden" id="modss" name="modss" value="<?php echo $perfil['modss']; ?>">
                                     <input type="hidden" id="idSubsede" name="idSubsede" value="">
                                     <label for="exampleInputEmail1">Nombre</label>
                                     <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">

@@ -28,7 +28,9 @@
                         
                         <div class='card-header'>
                             <h2><i class="fas fa-chart-bar"></i> Gestión de Proyectos </h2>
+                            <?php if (strpos($perfil['modpr'], 'C') !== false) { ?>                            
                                 <button type="button" slot="end" id="btn-create" class="btn btn-success btn btn3d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span><i class="fa-solid fa-plus"></i> Crear Nuevo</button>
+                            <?php } ?>    
                         </div>
                         <div class='card-body'>
 

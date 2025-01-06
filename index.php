@@ -22,16 +22,24 @@
                         Iniciar Sesión
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id="loginForm" action="login.php" method="post">
                             <div class="form-group">
                                 <label for="email">Usuario</label>
-                                <input type="text" class="form-control" id="usuario">
+                                <input type="text" class="form-control" id="username" name="username">
+                                <small id="textErrorUsername" style="display:none;" class="form-text text-danger">Campo Requerido</small>
                             </div>
                             <div class="form-group">
                                 <label for="password">Contraseña</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="password">
+                                <small id="textErrorPassword" style="display:none;" class="form-text text-danger">Campo Requerido</small>
                             </div>
-                            <button type="button" class="btn btn-primary btn-block" id="btn-ingresar">Ingresar</button>
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-ingresar">Ingresar</button>
+                            <?php 
+                            session_start(); 
+                            if (isset($_SESSION['error'])) { 
+                                echo "<p style='color:red;text-align: center;'>{$_SESSION['error']}</p>"; 
+                                unset($_SESSION['error']); }
+                            ?>
                         </form>
                     </div>
                 </div>
