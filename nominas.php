@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestión de Nóminas</title>
+    <title>Nóminas</title>
     <link rel="stylesheet" href="./lib/css/Styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -49,6 +49,7 @@
                             <div class="form-group">
                                 <!-- Id -->
                                 <input type="hidden" id="idnomina" name="idnomina" value="">
+                                <input type="hidden" id="modnm" name="modnm" value="<?php echo $perfil['modnm']; ?>">
                                 <label for="descripcion">Descripción</label>
                                 <input type="text" class="form-control" id="descripcion" aria-describedby="descHelp">
                                 <small id="textErrorDescripcion" style="display:none;" class="form-text text-danger">Campo Requerido</small>

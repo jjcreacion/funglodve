@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Glorias Deportivas</title>
     <link rel="stylesheet" href="./lib/css/Styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -149,6 +149,11 @@
                                     <!-- Id -->
                                     <input type="hidden" id="idgloria" name="idgloria" value="">
                                     <input type="hidden" id="modgl" name="modgl" value="<?php echo $perfil['modgl']; ?>">
+                                    <input type="hidden" id="modds" name="modds" value="<?php echo $perfil['modds']; ?>">
+                                    <input type="hidden" id="modcf" name="modcf" value="<?php echo $perfil['modcf']; ?>">
+                                    <input type="hidden" id="modhd" name="modhd" value="<?php echo $perfil['modhd']; ?>">
+                                    <input type="hidden" id="modbf" name="modbf" value="<?php echo $perfil['modbf']; ?>">
+
                                     <label for="exampleInputEmail1">Cédula</label>
                                     <input type="text" class="form-control" id="cedula" aria-describedby="emailHelp">
                                     <small id="textErrorCedula" style="display:none;" class="form-text text-danger">Campo Requerido</small>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" href="./lib/css/Styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -49,6 +49,7 @@
                                 <div class="form-group">
                                     <!-- Id -->
                                     <input type="hidden" id="idusuario" name="idproyecto" value="">
+                                    <input type="hidden" id="modus" name="modus" value="<?php echo $perfil['modus']; ?>">
                                     <label for="exampleInputEmail1">Nombre</label>
                                     <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
                                     <small id="textErrorNombre" style="display:none;" class="form-text text-danger">Campo Requerido</small>
